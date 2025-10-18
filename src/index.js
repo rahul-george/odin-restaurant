@@ -8,13 +8,13 @@ function handleTabChange(event) {
   contentContainer.removeChild(contentContainer.childNodes[0]);
   let child = null;
   switch (event.target.dataset.id) {
-    case "0":
+    case "starter":
       child = generateStarterMenu();
       break;
-    case "1":
+    case "main":
       child = generateMainMenu();
       break;
-    case "2":
+    case "drinks":
       child = generateDrinksMenu();
       break;
     default:
