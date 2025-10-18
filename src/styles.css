@@ -1,0 +1,40 @@
+body {
+    display: grid;
+    grid-template-rows: 1fr 3rem;
+    grid-template-columns: 10rem 1fr;
+    grid-template-areas:
+        "header content"
+        "header content"
+        "header footer";
+    background-color: cornsilk;
+
+}
+
+header {
+    grid-area: header;
+    display: grid;
+
+    background-color: coral;
+
+}
+
+#content {
+    grid-area: content;
+}
+
+header nav {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+footer {
+    grid-area: footer;
+    background-color: coral;
+}
+
+button {
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
