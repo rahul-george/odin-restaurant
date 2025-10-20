@@ -1,7 +1,16 @@
+:root {
+    --primary-background: #000000;
+    --secondary-background: #1c1818;
+    --primary-font-color: #FFFFFF;
+    --secondary-color: #C2292B;
+    --accent-color: #C2292B;
+}
 body {
     width: clamp(320px, 1fr ,1024px);
+    /*background-color: var(--header-background);*/
 }
 main {
+    color: var(--primary-font-color);
     display: grid;
     grid-template-rows: 1fr 3rem;
     grid-template-columns: auto 1fr;
@@ -9,7 +18,7 @@ main {
         "header content"
         "header content"
         "header footer";
-    background-color: cornsilk;
+    background-color:  var(--secondary-background);
 
 }
 
@@ -17,12 +26,13 @@ header {
     grid-area: header;
     display: grid;
 
-    background-color: coral;
+    background-color: var(--primary-background);
 
 }
 
 #content {
     grid-area: content;
+    color: var(--secondary-color)
 }
 
 header nav {
@@ -32,7 +42,7 @@ header nav {
 
 footer {
     grid-area: footer;
-    background-color: coral;
+    background-color: var(--primary-background);
 }
 
 button {
@@ -40,4 +50,6 @@ button {
     outline: none;
     border: none;
     background-color: inherit;
+
+    color: var(--primary-font-color)
 }
