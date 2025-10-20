@@ -3,9 +3,13 @@ import { generateStarterMenu } from "./starterMenu";
 import { generateMainMenu } from "./mainMenu";
 import { generateDrinksMenu } from "./drinksMenu";
 
+function removeContent() {
+  Array.from(contentContainer.childNodes).forEach((child) => child.remove());
+}
+
 console.log("Happy developing ✨");
 function handleTabChange(event) {
-  contentContainer.removeChild(contentContainer.childNodes[0]);
+  removeContent();
   let child = null;
   switch (event.target.dataset.id) {
     case "starter":
