@@ -1,17 +1,28 @@
 
 
 .card {
-
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+    grid-template-columns: 320px 50px;
+    grid-template-areas:
+            "heading photo"
+            "description photo";
+    background-color: var(--primary-font-color);
+    color: var(--primary-background)
 }
 
 .card-heading {
-
+    grid-area: heading;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .card-description {
+    grid-area: description
 
 }
 
 .card-photo {
+    grid-area: photo
 
 }
